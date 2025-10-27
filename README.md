@@ -35,4 +35,3 @@ For testing in public cloud please sign up at one of [Jelastic Cloud Providers w
 ## Managed Hosting Business 
 
 Interested in building managed hosting business offering Kubernetes services? Automated installation, scaling, updates and integrated billing simplify the management and support of customers requiring little to no involvement. [Start offering managed Kubernetes hosting](https://jelastic.com/managed-auto-scalable-clusters-for-business/) to your users with minimal investment of time and efforts.
-
