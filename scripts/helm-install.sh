@@ -60,7 +60,7 @@ mv -f /usr/local/bin/helm /usr/local/bin/helm_old &>/dev/null
 export DESIRED_VERSION="$HELM_VERSION"
 
 while true; do
-	curl -s https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash;
+	curl -s https://cdn.jsdelivr.net/gh/helm/helm@main/scripts/get-helm-3 | bash;
 	[ -f /usr/local/bin/helm ] && break; sleep 5;
 done
 
