@@ -867,8 +867,8 @@ addons:
           }
 
           function startUpgrade(version, next, upgrades) {
-            var baseUrl = "${baseUrl}".split("/"); baseUrl.pop(); baseUrl = baseUrl.join("/");
-            var url = baseUrl + "/" + next + "/addons/upgrade.jps";
+            var baseUrl = "${baseUrl}".replace(/@[^\/]+/, "@" + next);
+            var url = baseUrl + "/addons/upgrade.jps";
             var huc = new java.net.URL(url).openConnection();
             huc.setRequestMethod("HEAD");
             var code = huc.getResponseCode();
