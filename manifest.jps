@@ -1,7 +1,7 @@
 type: install
 version: 1.5
 id: kubernetes-release
-baseUrl: https://cdn.jsdelivr.net/gh/jelastic-jps/kubernetes@v1.29.9
+baseUrl: https://cdn.jsdelivr.net/gh/sych74/kubernetes@v1.29.9
 description:
   text: /text/description-kube.md
   short: Kubernetes cluster with automated scaling & cost efficient pay-per-use pricing for running cloud-native microservices.
@@ -750,7 +750,7 @@ addons:
   - id: upgrade-k8s-addon
     type: update
     permanent: true
-    baseUrl: https://cdn.jsdelivr.net/gh/jelastic-jps/kubernetes@v1.29.9
+    baseUrl: https://cdn.jsdelivr.net/gh/sych74/kubernetes@v1.29.9
     name: Cluster Upgrade
     description: Upgrade Kubernetes cluster to a newer version
     logo: /images/k8s-upgrade.png
@@ -867,8 +867,8 @@ addons:
           }
 
           function startUpgrade(version, next, upgrades) {
-            var baseUrl = "${baseUrl}".replace(/@[^\/]+/, "@" + next);
-            var url = baseUrl + "/addons/upgrade.jps";
+            var baseUrl = "${baseUrl}".split("/"); baseUrl.pop(); baseUrl = baseUrl.join("/");
+            var url = baseUrl + "/" + next + "/addons/upgrade.jps";
             var huc = new java.net.URL(url).openConnection();
             huc.setRequestMethod("HEAD");
             var code = huc.getResponseCode();
