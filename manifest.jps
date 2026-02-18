@@ -1,7 +1,7 @@
 type: install
 version: 1.5
 id: kubernetes-release
-baseUrl: https://cdn.jsdelivr.net/gh/jelastic-jps/kubernetes@v1.30.6
+baseUrl: https://cdn.jsdelivr.net/gh/sych74/kubernetes@v1.30.6
 description:
   text: /text/description-kube.md
   short: Kubernetes cluster with automated scaling & cost efficient pay-per-use pricing for running cloud-native microservices.
